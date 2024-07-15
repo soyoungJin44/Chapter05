@@ -31,7 +31,7 @@ public class PersonApp {
 
 		while (true) {
 			
-			String str = br.readLine();
+			String str = br.readLine();		//readLine() >> 값을 한줄씩 읽는다.
 			if(str == null) {
 				break;
 			} 
@@ -42,13 +42,25 @@ public class PersonApp {
 			Person result = new Person(sArray[0], sArray[1], sArray[2]);
 
 			parsonList.add(result);
-
+			
+			/*bw.write(str);
+			bw.newLine();
+			*/
 		}
+		br.close();
+		bw.close();
+		
 		for (int i = 0; i < parsonList.size(); i++) {
 			parsonList.get(i).showInfo();
 
 		}
-
+		for(int i=0;i<parsonList.size();i++) {
+			System.out.println(parsonList.get(i).getName());
+		}
+		 
+		
+		
+		
 	}
 
 }

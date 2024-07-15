@@ -58,6 +58,7 @@ public class Person {
 		System.out.println("회사: " + company);
 		System.out.println("**************");
 	}
+
 	
 	
 
