@@ -6,7 +6,9 @@ import java.io.IOException;
 import java.io.Writer;
 
 public class Ex01 {
-
+				
+	// writer >> 텍스트
+	
 	public static void main(String[] args) throws IOException {
 		
 		Writer fw = new FileWriter("C:\\javaStudy\\song.txt");
@@ -19,8 +21,6 @@ public class Ex01 {
 		bw.write("선생님이 우리를");
 		bw.newLine();
 		bw.write("기다린당~");
-		
-		
 		
 		
 		bw.close();
