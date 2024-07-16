@@ -11,8 +11,8 @@ public class PhoneApp {
 
 	public static void main(String[] args) throws IOException {
 
-		InputStream in = new FileInputStream("C:\\javaStudy\\PhoneDB_.txt");
-		InputStreamReader ir = new InputStreamReader(in, "PhoneDB_");
+		InputStream in = new FileInputStream("C:\\javaStudy\\PhoneDB.txt");
+		InputStreamReader ir = new InputStreamReader(in, "utf-8"); // 작성되어있는형식
 
 		BufferedReader br = new BufferedReader(ir);
 		ArrayList<PhoneDb> phoneList = new ArrayList<PhoneDb>();
@@ -23,13 +23,15 @@ public class PhoneApp {
 			if (str == null) {
 				break;
 			}
-			
-			StringArray[] sArray = 
-			
-			
+
+			String[] sArray = str.split(",");
+			PhoneDb result = new PhoneDb(sArray[0], sArray[1], sArray[2]);
+			phoneList.add(result);
 
 		}
-
+		for (int i = 0; i < phoneList.size(); i++) {
+			phoneList.get(i).showInfo();
+		}
+		br.close();
 	}
-
 }
